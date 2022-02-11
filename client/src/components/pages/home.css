@@ -1,0 +1,51 @@
+.Home {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.Left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #CDC392;
+}
+
+.Right {
+  flex: 9;
+  width: 50vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  /* z-index: 1; */
+}
+
+.books{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* write media query to make it responsive */
+
+@media screen and (max-width: 1024px) {
+  .Left{
+    background-image: url('../data/one.jpg');
+    background-size: cover;
+  }
+
+  .Right {
+    display: none;
+  }
+}
