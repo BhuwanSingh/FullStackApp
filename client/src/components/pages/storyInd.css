@@ -1,0 +1,43 @@
+.cover{
+    width: 100%;
+    height: max(100vh, 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+
+
+/* making a card for the story which has title story and it's likes */
+
+.book{
+    height: max(100vh, 100%);
+    overflow-y: hidden;
+}
+
+.book-title{
+    font-size: max(2em, 8vw);
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    margin: 50px;
+    padding-left: max(10px, 8vw);
+}
+
+.book-story{
+    font-size: 1.5em;
+    color: white;
+    /* justify content */
+    text-align: justify;
+    margin: 50px;
+    padding: 0;
+}
+
+.book-likes{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 50px;
+    padding: 0;
+}

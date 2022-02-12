@@ -19,7 +19,7 @@ const Stories = () => {
 				for (const key in data.books) {
 					// console.log(data.books[key]._id)
 					const story = {
-						id: key,
+						id: data.books[key]._id,
 						...data.books[key]
 					}
 					stories.push(story)
