@@ -26,8 +26,9 @@ const Home = () => {
 
     const data = await response.json()
 
-    if (data.status === 'ok') {
-      history.push('/login')
+    if (data.success) {
+      // history.push('/login')
+      history('/dashboard')
     }
   }
 

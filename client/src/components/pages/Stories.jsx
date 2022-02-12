@@ -1,17 +1,47 @@
-import React from 'react'
-import Like from '../data/like.svg'
+import { useState, useEffect } from 'react'
 import './stories.css'
+import StoryList from './StoryList'
 
 const Stories = () => {
+
+	const [isLoading, setIsLoading] = useState(false)
+	const [stories, setStories] = useState([])
+
+	useEffect(() => {
+		setIsLoading(true);
+		fetch('http://localhost:5000/api/books')
+			.then((Response) => Response.json()
+			)
+			.then((data) => {
+				const stories = [];
+
+				// console.log(data.books)
+				for (const key in data.books) {
+				// console.log(data.books[key]._id)
+					const story = {
+						id: key,
+						...data.books[key]
+					}
+					stories.push(story)
+				}
+				setIsLoading(false)
+				setStories(stories)
+			})
+	}, [])
+
+
+	if (isLoading) {
+		return <h1>Loading...</h1>
+	}
+
+	
+	// stories.sort() // set up sorting by likes
+	stories.sort((a, b) => b.likes - a.likes)
+
 	return (
 		<div className='stories'>
-			<div>Stories</div>
-			<div className='story'>
-				<div className='title'>This is a title</div>
-				<div className='likes'>
-					<img classname='like' src={Like} alt='like' />
-				</div>
-			</div>
+			<div className='heading'>Stories</div>
+			< StoryList stories={stories} />
 		</div>
 	)
 }

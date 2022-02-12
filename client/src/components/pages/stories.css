@@ -5,41 +5,17 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: #fafafa;
+    background-color: rgb(22, 19, 22);
+    overflow-y: hidden;
 }
 
-.story{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-color: #fafafa;
-}
-
-.title{
+.heading{
     font-size: 2em;
     font-weight: bold;
-    color: #000;
+    color: white;
     text-align: center;
-}
-
-.likes{
-    font-size: 1em;
-    font-weight: bold;
-    color: #000;
-    text-align: center;
-}
-
-.like{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: #fafafa;
+    margin: 50px;
+    padding: 0;
 }
 
 /* responsive design for device width 1024px  */

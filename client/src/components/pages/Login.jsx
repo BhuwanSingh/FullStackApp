@@ -21,9 +21,10 @@ function App() {
 		})
 
 		const data = await response.json()
-
-		if (data.user) {
-			localStorage.setItem('token', data.user)
+		console.log(data)
+		if (data.success) {
+			console.log(data)
+			localStorage.setItem('token', data.access_token)
 			alert('Login successful')
 			window.location.href = '/dashboard'
 		} else {
