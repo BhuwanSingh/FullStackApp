@@ -16,7 +16,9 @@ exports.getBooks = (req, res, next) => {
 }
 
 exports.getBook = (req, res, next) => {
-  const id = req.params.bookId
+  const id = req.params.id
+  console.log(id)
+  console.table(req.params)
   Books.findById(id)
     .then((book) => {
       res.status(200).json(book)

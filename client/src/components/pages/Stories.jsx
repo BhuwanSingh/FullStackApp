@@ -17,7 +17,7 @@ const Stories = () => {
 
 				// console.log(data.books)
 				for (const key in data.books) {
-				// console.log(data.books[key]._id)
+					// console.log(data.books[key]._id)
 					const story = {
 						id: key,
 						...data.books[key]
@@ -34,7 +34,7 @@ const Stories = () => {
 		return <h1>Loading...</h1>
 	}
 
-	
+
 	// stories.sort() // set up sorting by likes
 	stories.sort((a, b) => b.likes - a.likes)
 
