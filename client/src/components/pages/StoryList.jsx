@@ -3,6 +3,7 @@ import './storyList.css';
 
 const StoryList = (props) => {
 	return (
+		<div className='container'>
 		<ul className="story-list">
 			{props.stories.map(story => (
 				<StoryItem
@@ -13,6 +14,7 @@ const StoryList = (props) => {
 					likes={story.likes} />
 			))}
 		</ul>
+		</div>
 	);
 }
 

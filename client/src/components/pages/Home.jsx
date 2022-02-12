@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 import './home.css'
 import Image from '../data/one.jpg'
 
@@ -38,21 +38,21 @@ const Home = () => {
       <div class="title-form">Welcome</div>
       <div class="subtitle">Let's create your account!</div>
         <form onSubmit={registerUser}>
-          <input
+          <input className='input-field'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type="email"
             placeholder="Email"
           />
           <br />
-          <input
+          <input className='input-field'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type="password"
             placeholder="Password"
           />
           <br />
-          <input
+          <input className='input-field'
             value={password_confirmation}
             onChange={(e) => setPassword_confirmation(e.target.value)}
             type="password"
@@ -61,6 +61,10 @@ const Home = () => {
           <br />
           <input type="submit" className='form-submit' value="Register" />
         </form>
+        <div  style={{color:"black" ,fontSize:"12px"}}>
+				<span>Already have an account? </span><Link to="/login">Login</Link>
+		
+				</div>
       </div>
       <div className='Right'>
         {/* <img src="../data/one.jpg" alt="books" /> */}

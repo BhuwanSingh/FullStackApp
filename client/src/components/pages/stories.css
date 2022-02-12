@@ -11,12 +11,19 @@
 }
 
 .heading {
-  font-size: 2em;
+  font-size: 5em;
   font-weight: bold;
-  color: white;
+  color: #ffd98e;
   text-align: center;
-  margin: 50px;
+  margin-bottom: 50px;
   padding: 0;
+}
+
+.line{
+  width: 75vw;
+  height: 1px;
+  background-color: #ffd98e;
+  margin-bottom: 50px;
 }
 
 /* responsive design for device width 1024px  */

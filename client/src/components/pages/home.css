@@ -65,12 +65,14 @@ margin-bottom: 5px;
   height: 50px;
   text-align: center;
   width: 100px;
+  padding-top: 0;
+  margin-top: 10px;
 }
 .form-submit:active{
       background-color: #06b;
   
 }
-input{
+.input-field{
   position: relative;
   height:50px;
   width: 100%;
@@ -82,6 +84,10 @@ input{
   padding: 4px 20px 0;
   margin: 10px 0 10px 0;
   
+}
+.input-field:focus ~ .placeholder,
+.input-field:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
 }
 /* write media query to make it responsive */
 

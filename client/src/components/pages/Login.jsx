@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './home.css'
+import { Link } from "react-router-dom";
 import Image from '../data/one.jpg'
 
 function App() {
@@ -38,25 +39,28 @@ function App() {
 			<div class="title-form">Welcome Back</div>
       		<div class="subtitle">Please login to your account.</div>
 				<form onSubmit={loginUser}>
-					<input
+					<input className='input-field'
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
 						type="email"
 						placeholder="Email"
 					/>
 					<br />
-					<input
+					<input className='input-field'
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
 						type="password"
 						placeholder="Password"
 					/>
 					<br />
-					<input type="submit" className="form-submit" value="Login" />
-				</form>
-				<div>
-				<p>
+					<input
+						type="submit" className="form-submit" value="Login" />
 					
+				</form>
+				<div className='="subtitle'>
+				<p>
+						Don't have an account? 
+						<Link to="/"> Signup</Link>
 				</p>
 				</div>
 			</div>

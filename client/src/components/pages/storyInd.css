@@ -12,19 +12,20 @@
 }
 
 .book-title{
-    font-size: max(2em, 8vw);
+    font-size: max(2em, 6vw);
     font-weight: bold;
     color: #ffd98e;
     text-align: left;
-    margin: 50px;
-    margin-right: 1000px;
+    margin-top: 50px;
+    margin-right: 600px;
     padding-left: max(10px, 8vw);
 }
 
 .book-story{
     font-size: 1.4em;
+    font-family: inherit;
     color: #ffd98e  ;
-    text-align: justify;
+    text-align: justify;    
     margin: 50px;
     padding: 0;
 }

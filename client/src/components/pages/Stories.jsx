@@ -40,7 +40,8 @@ const Stories = () => {
 
 	return (
 		<div className='stories'>
-			<div className='heading'>Stories</div>
+			<div className='heading'>STORIES</div>
+			<hr className='line' />
 			< StoryList stories={stories} />
 		</div>
 	)
