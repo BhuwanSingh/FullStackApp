@@ -35,7 +35,8 @@ const Home = () => {
   return (
     <div className='Home'>
       <div className='Left'>
-        <h1>Form</h1>
+      <div class="title-form">Welcome</div>
+      <div class="subtitle">Let's create your account!</div>
         <form onSubmit={registerUser}>
           <input
             value={email}
@@ -58,7 +59,7 @@ const Home = () => {
             placeholder="Confirm Password"
           />
           <br />
-          <input type="submit" value="Register" />
+          <input type="submit" className='form-submit' value="Register" />
         </form>
       </div>
       <div className='Right'>

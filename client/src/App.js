@@ -24,7 +24,6 @@ function App() {
           <Route path="*" element={<div>404</div>} />
         </Routes>
       </BrowserRouter>
-      ,
     </div>
   )
 }

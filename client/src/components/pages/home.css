@@ -5,18 +5,21 @@
   justify-content: center;
   align-items: center;
   overflow-y: hidden;
-  overflow-x: hidden;
+  overflow-x: hidden;  
+
 }
+
 
 .Left {
   width: 100%;
   height: 100%;
-  display: flex;
+  display: flex; 
   flex: 4;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #CDC392;
+  padding:30px;
 }
 
 .Right {
@@ -36,7 +39,50 @@
   height: 100%;
   object-fit: cover;
 }
+.title-form {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+margin-bottom: 5px;
+}
 
+.subtitle {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0 10px 0;
+}
+.form-submit{
+  background-color: #08d;
+  border-radius: 10px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  text-align: center;
+  width: 100px;
+}
+.form-submit:active{
+      background-color: #06b;
+  
+}
+input{
+  position: relative;
+  height:50px;
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  outline: 0;
+  padding: 4px 20px 0;
+  margin: 10px 0 10px 0;
+  
+}
 /* write media query to make it responsive */
 
 @media screen and (max-width: 1024px) {

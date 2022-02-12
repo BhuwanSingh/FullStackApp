@@ -35,7 +35,8 @@ function App() {
 	return (
 		<div className='Home'>
 			<div className='Left'>
-				<h1>Login</h1>
+			<div class="title-form">Welcome Back</div>
+      		<div class="subtitle">Please login to your account.</div>
 				<form onSubmit={loginUser}>
 					<input
 						value={email}
@@ -51,8 +52,13 @@ function App() {
 						placeholder="Password"
 					/>
 					<br />
-					<input type="submit" value="Login" />
+					<input type="submit" className="form-submit" value="Login" />
 				</form>
+				<div>
+				<p>
+					
+				</p>
+				</div>
 			</div>
 			<div className='Right'>
 			<img src={Image} alt="books" className='books' />

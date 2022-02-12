@@ -36,9 +36,9 @@ const StoryInd = () => {
     <div className='cover'>
       <div className='book'>
         <div className='book-title'>{Story.title}</div>
+        <div className='book-likes'>Likes: {Story.likes}</div>
         <div className='book-story'>{Story.story}</div>
         {/* <img className="image" src={Story.image} alt="random_image_from_api"></img> */}
-        <div className='book-likes'>{Story.likes}</div>
       </div>
     </div>
   )
