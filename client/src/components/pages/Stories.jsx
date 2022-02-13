@@ -7,6 +7,11 @@ const Stories = () => {
 	const [isLoading, setIsLoading] = useState(false)
 	const [stories, setStories] = useState([])
 
+	// If not logged in, redirect to login page
+	if(!localStorage.getItem('token')) {
+		window.location.href = '/login'
+	}
+
 	useEffect(() => {
 		setIsLoading(true);
 		fetch('http://localhost:5000/api/books')

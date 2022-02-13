@@ -11,11 +11,12 @@
 }
 
 .heading {
+  position: sticky;
   font-size: 5em;
   font-weight: bold;
   color: #ffd98e;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   padding: 0;
 }
 

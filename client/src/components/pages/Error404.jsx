@@ -6,7 +6,7 @@ function Error404() {
   return (
     <div className='container'>
         <button className="button" onClick={() => window.location.href = '/'}> Home </button>
-   </div>
+    </div>
 
   )
 }

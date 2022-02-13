@@ -9,8 +9,27 @@ const Home = () => {
   const [password, setPassword] = useState('')
   const [password_confirmation , setPassword_confirmation] = useState('')
 
+  // function to check if the password is according to a regex
+  const checkPassword = (password) => {
+    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,}$/
+    let test = regex.test(password)
+    if (test) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+
   async function registerUser(event) {
     event.preventDefault()
+
+    if ( password !== password_confirmation ) {
+      alert('password does not match')
+    } else if ( !checkPassword(password) ) {
+      alert('a minimum of 1 upper case letter [A-Z]\na minimum of 1 lower case letter [a-z]\na minimum of 1 numeric character [0-9]\na minimum of 1 special character\npassword must be at least 10 characters in length, but can be much longer.')
+    } else {
+
 
     const response = await fetch('http://localhost:5000/api/signup', {
       method: 'POST',
@@ -27,10 +46,12 @@ const Home = () => {
     const data = await response.json()
 
     if (data.success) {
-      // history.push('/login')
       history('/dashboard')
+    } else {
+      alert('User Already Exists')
     }
   }
+}
 
   return (
     <div className='Home'>
@@ -48,6 +69,7 @@ const Home = () => {
           <input className='input-field'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            // odChange={ (e) => checkPassword(e.target.value) }
             type="password"
             placeholder="Password"
           />
