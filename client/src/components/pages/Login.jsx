@@ -57,11 +57,8 @@ function App() {
 						type="submit" className="form-submit" value="Login" />
 					
 				</form>
-				<div className='="subtitle'>
-				<p>
-						Don't have an account? 
-						<Link to="/"> Signup</Link>
-				</p>
+				<div >
+				<p>Don't have an account? <Link to="/"> Signup</Link></p>
 				</div>
 			</div>
 			<div className='Right'>

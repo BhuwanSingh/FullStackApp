@@ -85,10 +85,7 @@ margin-bottom: 5px;
   margin: 10px 0 10px 0;
   
 }
-.input-field:focus ~ .placeholder,
-.input-field:not(:placeholder-shown) ~ .placeholder {
-  transform: translateY(-30px) translateX(10px) scale(0.75);
-}
+
 /* write media query to make it responsive */
 
 @media screen and (max-width: 1024px) {

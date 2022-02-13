@@ -4,7 +4,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './components/pages/Home.jsx'
 import Login from './components/pages/Login.jsx'
 import Stories from './components/pages/Stories.jsx'
+import Error404 from './components/pages/Error404.jsx'
 import StoryInd from './components/pages/StoryInd'
+
 // import createHistory from 'history/createBrowserHistory'
 import { createBrowserHistory } from 'history' 
     
@@ -21,7 +23,7 @@ function App() {
           <Route path="/dashboard" exact element={<Stories />} />
           {/* Route for individual page to be accessed through the url paramter */}
           <Route path="/dashboard/:id" history={history} element={<StoryInd />} />
-          <Route path="*" element={<div>404</div>} />
+          <Route path="*"element={<Error404 />}  />
         </Routes>
       </BrowserRouter>
     </div>

@@ -61,9 +61,9 @@ const Home = () => {
           <br />
           <input type="submit" className='form-submit' value="Register" />
         </form>
-        <div  style={{color:"black" ,fontSize:"12px"}}>
-				<span>Already have an account? </span><Link to="/login">Login</Link>
-		
+        <div  >
+				<p>Already have an account? <Link to="/login">Login</Link>
+        </p>
 				</div>
       </div>
       <div className='Right'>
