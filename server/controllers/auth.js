@@ -116,7 +116,7 @@ exports.signin = async (req, res) => {
                   res.status(500).json({ erros: err })
                 }
                 if (decoded) {
-                  console.log("user signed in")
+                  // console.log("user signed in")
                   return res.status(200).json({
                     success: true,
                     token: access_token,
@@ -127,7 +127,7 @@ exports.signin = async (req, res) => {
             )
           })
           .catch((err) => {
-            console.log("here")
+            // console.log("here")
             res.status(500).json({ errors: err })
           })
       }

@@ -1,4 +1,4 @@
-const Books = require('../models/books')
+const Books = require('../models/Books')
 
 exports.getBooks = (req, res, next) => {
   Books.find()
@@ -17,8 +17,8 @@ exports.getBooks = (req, res, next) => {
 
 exports.getBook = (req, res, next) => {
   const id = req.params.id
-  console.log(id)
-  console.table(req.params)
+  // console.log(id)
+  // console.table(req.params)
   Books.findById(id)
     .then((book) => {
       res.status(200).json(book)

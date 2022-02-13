@@ -1,9 +1,9 @@
 // upload more stories through the CSV coming through the API
-const Books = require('../models/books')
+const Books = require('../models/Books')
 
 exports.moreBooks = (req, res, next) => {
 	const csv = req.body
-	console.log(csv)
+	// console.log(csv)
 	// create a new array to store the data of an object which has title story and likes.
 	const newBooks = []
 	// convert the CSV to JSON and store it in the newBooks array.

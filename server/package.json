@@ -4,7 +4,7 @@
   "description": "Fullstack Microservice Assignment",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/BhuwanSingh/FullStackApp#readme",
   "dependencies": {
-    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",

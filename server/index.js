@@ -9,9 +9,12 @@ app.use(express.urlencoded({ extended: true }))
 
 require('dotenv').config()
 
+
+// I know I know, directly putting this mongoDB connection username and password in the server.js file is bad practice, 
+// but I'm just doing it for the sake of time. Because Spinning up a local mongoDB container is taking more time than I want to spend on this project.
 const mongoose = require('mongoose')
 mongoose
-  .connect('mongodb://localhost:27017/FullstackAppDatabase', {
+  .connect('mongodb+srv://sample:sample@cluster0.gnxus.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
