@@ -14,7 +14,7 @@ const Stories = () => {
 
 	useEffect(() => {
 		setIsLoading(true);
-		fetch('http://localhost:5000/api/books')
+		fetch('https://FullStackApp.bhuwansingh.repl.co/api/books')
 			.then((Response) => Response.json()
 			)
 			.then((data) => {

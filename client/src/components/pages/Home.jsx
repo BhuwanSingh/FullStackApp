@@ -31,7 +31,7 @@ const Home = () => {
     } else {
 
 
-    const response = await fetch('http://localhost:5000/api/signup', {
+    const response = await fetch('https://FullStackApp.bhuwansingh.repl.co/api/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

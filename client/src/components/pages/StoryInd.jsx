@@ -17,7 +17,7 @@ const StoryInd = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`http://localhost:5000/api/books/${id}`)
+    fetch(`https://FullStackApp.bhuwansingh.repl.co/api/books/${id}`)
       .then((Response) => Response.json()
       )
       .then((data) => {
